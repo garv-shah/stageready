@@ -1,0 +1,194 @@
+/* Updated: 2025-09-29T04:12:09.916Z */
+/* Updated: 2025-09-29T03:35:45.308Z */
+/* Updated: 2025-09-18T12:41:01.660Z */
+/* Updated: 2025-09-18T03:25:43.129Z */
+/* Updated: 2025-09-17T06:54:17.475Z */
+/* Updated: 2025-09-17T05:25:35.670Z */
+/* Updated: 2025-09-17T05:25:31.690Z */
+/* Updated: 2025-09-17T05:09:19.352Z */
+/* Updated: 2025-09-17T04:06:02.296Z */
+/* Updated: 2025-09-17T03:42:41.628Z */
+/* Updated: 2025-09-17T03:11:05.035Z */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #ffe3eb; /* Light pink from image */
+  --color-foreground: #000000; /* Black text from image */
+
+  --color-card: #ffffff;
+  --color-card-foreground: #0a0a0a;
+
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0a0a0a;
+
+  --color-primary: #000000; /* Black for primary elements */
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #f0f0f0;
+  --color-secondary-foreground: #171717;
+
+  --color-muted: #f0f0f0;
+  --color-muted-foreground: #737373;
+
+  --color-accent: #000000; /* Black for accent elements */
+  --color-accent-foreground: #ffe3eb; /* Light pink for accent foreground */
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fafafa;
+
+  --color-border: #e5e5e5;
+  --color-input: #e5e5e5;
+  --color-ring: #000000; /* Black ring color */
+
+  --color-chart-1: #e67e22;
+  --color-chart-2: #2d8659;
+  --color-chart-3: #1e3a5f;
+  --color-chart-4: #f1c40f;
+  --color-chart-5: #e74c3c;
+
+  --color-logo-bg: #000000; /* Black background for the logo icon */
+  --color-logo-icon: #ffe3eb; /* Light pink for the logo icon */
+
+  --font-sans: "Public Sans";
+
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #e5e5e5;
+  }
+}
+
+@layer utilities {
+  body {
+    font-family: var(--font-sans), sans-serif;
+  }
+}
+
+@layer base {
+  :root {
+    --background: var(--color-background);
+    --foreground: var(--color-foreground);
+    --card: var(--color-card);
+    --card-foreground: var(--color-card-foreground);
+    --popover: var(--color-popover);
+    --popover-foreground: var(--color-popover-foreground);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-primary-foreground);
+    --secondary: var(--color-secondary);
+    --secondary-foreground: var(--color-secondary-foreground);
+    --muted: var(--color-muted);
+    --muted-foreground: var(--color-muted-foreground);
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-accent-foreground);
+    --destructive: var(--color-destructive);
+    --destructive-foreground: var(--color-destructive-foreground);
+    --border: var(--color-border);
+    --input: var(--color-input);
+    --ring: var(--color-ring);
+    --chart-1: var(--color-chart-1);
+    --chart-2: var(--color-chart-2);
+    --chart-3: var(--color-chart-3);
+    --chart-4: var(--color-chart-4);
+    --chart-5: var(--color-chart-5);
+    --radius: var(--radius-lg);
+  }
+
+  .dark {
+    --background: #000000; /* Black background for dark mode */
+    --foreground: #ffe3eb; /* Light pink text for dark mode */
+    --card: #0a0a0a;
+    --card-foreground: #fafafa;
+    --popover: #0a0a0a;
+    --popover-foreground: #fafafa;
+    --primary: #ffe3eb; /* Light pink for primary elements in dark mode */
+    --primary-foreground: #000000; /* Black for primary foreground in dark mode */
+    --secondary: #262626;
+    --secondary-foreground: #fafafa;
+    --muted: #262626;
+    --muted-foreground: #a3a3a3;
+    --accent: #262626;
+    --accent-foreground: #fafafa;
+    --destructive: #7f1d1d;
+    --destructive-foreground: #fafafa;
+    --border: #262626;
+    --input: #262626;
+    --ring: #d4d4d8;
+    --chart-1: #3b82f6;
+    --chart-2: #10b981;
+    --chart-3: #f59e0b;
+    --chart-4: #8b5cf6;
+    --chart-5: #ef4444;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans), sans-serif;
+    font-weight: 600; /* Based on the 'stage ready' text weight */
+  }
+
+  html {
+    color-scheme: light; /* Default to light mode */
+  }
+
+  .dark html {
+    color-scheme: dark; /* Switch to dark mode for dark theme */
+  }
+
+  .container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+  }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
