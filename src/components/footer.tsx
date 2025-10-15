@@ -72,7 +72,7 @@ export default function Footer({
                   {companyName}
                 </p>
                 <p className="text-xs text-muted-foreground sm:text-sm">
-                  Premium Home Staging & Melbourne
+                  Premium Home Staging Melbourne
                 </p>
               </div>
             </div>
