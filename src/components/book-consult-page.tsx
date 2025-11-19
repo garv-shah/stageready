@@ -129,7 +129,7 @@ export default function BookConsultPage({ className }: Props) {
             Book your complimentary staging consultation
           </h1>
           <p className="text-muted-foreground max-w-prose">
-            Discover how Stage Ready can elevate your listing with a tailored plan. No pressure, no obligationjust expert guidance to help you sell faster and for more.
+            Discover how Stage Ready can elevate your listing with a tailored plan. No pressure, no obligation just expert guidance to help you sell faster and for more.
           </p>
         </header>
 
@@ -390,11 +390,6 @@ export default function BookConsultPage({ className }: Props) {
                     <p className="text-sm">
                       Earn a referral bonus when your client books a staging project after their free consultation.
                     </p>
-                    <ul className="mt-3 list-disc pl-5 text-sm text-muted-foreground space-y-1">
-                      <li>$100 bonus on projects under $1,500</li>
-                      <li>$200 bonus on projects $1,500$3,000</li>
-                      <li>$300 bonus on projects over $3,000</li>
-                    </ul>
                   </div>
                   <div className="grid gap-4 sm:grid-cols-3">
                     <div className="rounded-md border p-4">

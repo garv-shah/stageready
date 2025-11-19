@@ -18,9 +18,9 @@ export default function Page() {
         {/* add consistent vertical padding across interior pages */}
         <div className="container mx-auto px-3 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16 space-y-12 sm:space-y-16">
           <div className="text-center space-y-4">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold">Our Work</h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold">A Gallery of Transformations</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore our portfolio of beautifully staged homes that showcase our expertise in creating compelling spaces that tell a story.
+              Explore our portfolio of staged homes. From contemporary condos to rustic retreats, we create spaces that buyers fall in love with.
             </p>
           </div>
           <OurWorkPage />

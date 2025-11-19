@@ -69,8 +69,8 @@ const services: Service[] = [
       "Photo-ready presentation with cohesive color story",
     ],
     image: {
-      src: "/images/staged-living-room-1.jpg",
-      alt: "Light-filled staged living room with neutral palette and soft pink accents",
+      src: "/images/vacant-property-styling.jpg",
+      alt: "Light-filled staged living room with neutral palette and accents of colour",
     },
     testimonial: {
       quote:
@@ -105,7 +105,7 @@ const services: Service[] = [
       "Styling day and photo-ready finishing touches",
     ],
     image: {
-      src: "/images/staged-dining-room-1.jpg",
+      src: "/images/occupied-property-styling.jpg",
       alt: "Refreshed dining area with curated styling in an occupied home",
     },
     testimonial: {
@@ -141,7 +141,7 @@ const services: Service[] = [
       "De-staging post-settlement or campaign end",
     ],
     image: {
-      src: "/images/staged-bedroom-1.jpg",
+      src: "/images/partial-property-styling.jpg",
       alt: "Calm, styled bedroom with layered textures and neutral tones",
     },
     testimonial: {
@@ -177,7 +177,7 @@ const services: Service[] = [
       "Handover documentation and de-staging",
     ],
     image: {
-      src: "/images/staged-kitchen-1.jpg",
+      src: "/images/styling-for-developers.jpg",
       alt: "Modern display kitchen and living space staged for developers",
     },
     testimonial: {
@@ -240,8 +240,7 @@ export default function ServicesPage({
           Thoughtful styling that sells the story of your home
         </h1>
         <p className="mt-3 max-w-[70ch] text-sm leading-relaxed text-muted-foreground sm:text-base">
-          Stage Ready delivers refined, market-driven presentations with a calm, neutral palette and subtle pink
-          accents. Each service is tailored to your property, audience, and campaign timeline.
+          Stage Ready delivers refined, market-driven presentations with a calm, neutral palette and subtle accents of colour. Each service is tailored to your property, audience, and campaign timeline.
         </p>
       </header>
 
@@ -391,7 +390,7 @@ export default function ServicesPage({
           <div className="min-w-0">
             <p className="text-sm font-semibold">Our styling approach</p>
             <p className="mt-1 max-w-[65ch] text-sm text-muted-foreground">
-              Neutral foundations, layered texture, and a restrained palette with soft pink notes. We tailor every
+              Neutral foundations, layered texture, and notes of colour. We tailor every
               scheme to your buyer profile and architecture to create a cohesive, photo-ready presentation.
             </p>
           </div>

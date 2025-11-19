@@ -14,9 +14,7 @@ export default function Page() {
       <Navigation />
 
       <main className="flex-1">
-        <div className="container mx-auto px-3 sm:px-6 lg:px-8">
-          <HomePageSection />
-        </div>
+        <HomePageSection />
       </main>
 
       <Footer />

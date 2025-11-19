@@ -103,9 +103,20 @@ export default function HomePageSection({ className }: HomePageProps) {
   return (
     <section className={cn("w-full", className)} aria-label="Stage Ready home">
       {/* Hero */}
-      <div className="w-full">
-        <div className="mx-auto w-full max-w-6xl">
-          <Card className="mt-6 overflow-hidden border border-border bg-card">
+      <div className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/images/homepage-background.jpg"
+          alt="Elegant home staging background"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/20" />
+
+        <div className="relative z-10 mx-auto w-full max-w-6xl p-4 sm:p-6">
+          <Card className="overflow-hidden border-none bg-background/95 shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-background/85 sm:max-w-2xl">
             <CardContent className="p-6 sm:p-10">
               <div className="flex flex-col gap-6 sm:gap-8">
                 <div className="inline-flex w-fit items-center gap-2 rounded-full bg-accent-foreground/80 px-3 py-1 text-xs font-semibold text-primary">
@@ -115,7 +126,7 @@ export default function HomePageSection({ className }: HomePageProps) {
                   Stage Ready - Home Staging & Styling
                 </div>
                 <div className="max-w-3xl">
-                  <h1 className="break-words text-3xl leading-tight sm:text-4xl md:text-5xl">
+                  <h1 className="break-words text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl">
                     Story-led home staging that inspires buyers and elevates value
                   </h1>
                   <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -133,7 +144,7 @@ export default function HomePageSection({ className }: HomePageProps) {
                   <Button
                     asChild
                     variant="outline"
-                    className="border-border bg-card text-foreground hover:bg-muted focus-visible:ring-ring"
+                    className="border-input bg-background text-foreground hover:bg-muted focus-visible:ring-ring"
                   >
                     <Link href="/services">View services</Link>
                   </Button>
@@ -144,7 +155,7 @@ export default function HomePageSection({ className }: HomePageProps) {
         </div>
       </div>
 
-      {/* Styles Showcase */}
+      {/* Styles Showcase
       <div className="mx-auto w-full max-w-6xl">
         <div className="mt-12 sm:mt-16">
           <div className="mb-6 sm:mb-8">
@@ -167,10 +178,10 @@ export default function HomePageSection({ className }: HomePageProps) {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* CTA */}
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <div className="my-12 sm:my-16">
           <Card className="overflow-hidden border border-border">
             <div className="flex flex-col items-start gap-4 bg-accent-foreground/70 px-6 py-8 text-primary sm:flex-row sm:items-center sm:justify-between sm:px-8">

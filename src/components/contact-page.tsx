@@ -147,7 +147,7 @@ export default function ContactPage({
                     </div>
                   </a>
 
-                  <div className="flex items-start gap-3 rounded-md px-3 py-2 ring-1 ring-inset ring-border">
+                  {/* <div className="flex items-start gap-3 rounded-md px-3 py-2 ring-1 ring-inset ring-border">
                     <div className="rounded-md bg-secondary p-2 text-foreground">
                       <MapPin className="h-4 w-4" aria-hidden />
                     </div>
@@ -157,7 +157,7 @@ export default function ContactPage({
                         By appointment only  Melbourne, Victoria
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
 
@@ -183,35 +183,20 @@ export default function ContactPage({
               </Card>
 
               <Card className="bg-card">
-                <CardHeader className="pb-3">
+                <CardHeader className="pb-0">
                   <CardTitle className="text-base sm:text-lg">Service areas</CardTitle>
                   <CardDescription>We frequently serve these Melbourne areas:</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-foreground">
-                      Melbourne Metro
-                    </span>
-                    <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-foreground">
-                      Inner North
-                    </span>
-                    <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-foreground">
                       Inner East
                     </span>
                     <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-foreground">
+                      South Eastern Suburbs
+                    </span>
+                    <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-foreground">
                       Bayside
-                    </span>
-                    <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-foreground">
-                      Mornington Peninsula
-                    </span>
-                    <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-foreground">
-                      Geelong
-                    </span>
-                    <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-foreground">
-                      Western Suburbs
-                    </span>
-                    <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-foreground">
-                      Eastern Suburbs
                     </span>
                   </div>
                   <p className="mt-3 text-xs text-muted-foreground">
@@ -224,7 +209,7 @@ export default function ContactPage({
         </div>
 
         {/* Map / Location image */}
-        <Card className="bg-card overflow-hidden">
+        {/* <Card className="bg-card overflow-hidden">
           <CardHeader className="pb-0">
             <CardTitle className="text-base sm:text-lg">Where we work</CardTitle>
             <CardDescription>Serving Melbourne and surrounding communities.</CardDescription>
@@ -244,7 +229,7 @@ export default function ContactPage({
               Meetings at our studio are by appointment. Virtual consultations are also available.
             </p>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </section>
   )
