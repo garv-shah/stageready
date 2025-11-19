@@ -59,7 +59,7 @@ const services: Service[] = [
     value: [
       "Defines scale and flow so rooms feel spacious and functional",
       "Creates an inviting first impression for photography and open homes",
-      "Helps buyers visualize lifestyle, increasing perceived value",
+      "Helps buyers visualise lifestyle, increasing perceived value",
       "Typically reduces days on market and improves offer quality",
     ],
     deliverables: [
@@ -99,7 +99,7 @@ const services: Service[] = [
       "Professional guidance to streamline open-home prep",
     ],
     deliverables: [
-      "Room-by-room strategy and prioritized action plan",
+      "Room-by-room strategy and prioritised action plan",
       "Furniture reconfiguration and selective rentals if required",
       "Artwork and soft furnishings to complete the look",
       "Styling day and photo-ready finishing touches",
