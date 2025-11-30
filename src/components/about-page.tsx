@@ -95,7 +95,7 @@ export default function AboutPage({ className }: AboutPageProps) {
       className={`w-full max-w-full bg-background text-foreground ${className ?? ""}`}
       aria-labelledby="about-title"
     >
-      <div className="container w-full max-w-full">
+      <div className="container w-full max-w-full px-4 md:px-8">
         {/* Hero */}
         <div className="w-full max-w-full bg-card rounded-lg border p-6 sm:p-8 lg:p-10">
           <div className="flex flex-col gap-8">

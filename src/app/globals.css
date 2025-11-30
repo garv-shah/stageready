@@ -15,8 +15,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-background: #ffe3eb; /* Light pink from image */
-  --color-foreground: #000000; /* Black text from image */
+  --color-background: #ffe3eb;
+  /* Light pink from image */
+  --color-foreground: #000000;
+  /* Black text from image */
 
   --color-card: #ffffff;
   --color-card-foreground: #0a0a0a;
@@ -24,7 +26,8 @@
   --color-popover: #ffffff;
   --color-popover-foreground: #0a0a0a;
 
-  --color-primary: #000000; /* Black for primary elements */
+  --color-primary: #000000;
+  /* Black for primary elements */
   --color-primary-foreground: #ffffff;
 
   --color-secondary: #f0f0f0;
@@ -33,15 +36,18 @@
   --color-muted: #f0f0f0;
   --color-muted-foreground: #737373;
 
-  --color-accent: #000000; /* Black for accent elements */
-  --color-accent-foreground: #ffe3eb; /* Light pink for accent foreground */
+  --color-accent: #000000;
+  /* Black for accent elements */
+  --color-accent-foreground: #ffe3eb;
+  /* Light pink for accent foreground */
 
   --color-destructive: #ef4444;
   --color-destructive-foreground: #fafafa;
 
   --color-border: #e5e5e5;
   --color-input: #e5e5e5;
-  --color-ring: #000000; /* Black ring color */
+  --color-ring: #000000;
+  /* Black ring color */
 
   --color-chart-1: #e67e22;
   --color-chart-2: #2d8659;
@@ -49,8 +55,10 @@
   --color-chart-4: #f1c40f;
   --color-chart-5: #e74c3c;
 
-  --color-logo-bg: #000000; /* Black background for the logo icon */
-  --color-logo-icon: #ffe3eb; /* Light pink for the logo icon */
+  --color-logo-bg: #000000;
+  /* Black background for the logo icon */
+  --color-logo-icon: #ffe3eb;
+  /* Light pink for the logo icon */
 
   --font-sans: "Public Sans";
 
@@ -65,14 +73,17 @@
     from {
       height: 0;
     }
+
     to {
       height: var(--radix-accordion-content-height);
     }
   }
+
   @keyframes accordion-up {
     from {
       height: var(--radix-accordion-content-height);
     }
+
     to {
       height: 0;
     }
@@ -88,6 +99,7 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -133,14 +145,18 @@
   }
 
   .dark {
-    --background: #000000; /* Black background for dark mode */
-    --foreground: #ffe3eb; /* Light pink text for dark mode */
+    --background: #000000;
+    /* Black background for dark mode */
+    --foreground: #ffe3eb;
+    /* Light pink text for dark mode */
     --card: #0a0a0a;
     --card-foreground: #fafafa;
     --popover: #0a0a0a;
     --popover-foreground: #fafafa;
-    --primary: #ffe3eb; /* Light pink for primary elements in dark mode */
-    --primary-foreground: #000000; /* Black for primary foreground in dark mode */
+    --primary: #ffe3eb;
+    /* Light pink for primary elements in dark mode */
+    --primary-foreground: #000000;
+    /* Black for primary foreground in dark mode */
     --secondary: #262626;
     --secondary-foreground: #fafafa;
     --muted: #262626;
@@ -166,20 +182,28 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-foreground;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-sans), sans-serif;
-    font-weight: 600; /* Based on the 'stage ready' text weight */
+    font-weight: 600;
+    /* Based on the 'stage ready' text weight */
   }
 
   html {
-    color-scheme: light; /* Default to light mode */
+    color-scheme: light;
+    /* Default to light mode */
   }
 
   .dark html {
-    color-scheme: dark; /* Switch to dark mode for dark theme */
+    color-scheme: dark;
+    /* Switch to dark mode for dark theme */
   }
 
   .container {
