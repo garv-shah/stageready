@@ -217,7 +217,7 @@ export default function ContactPage({
           <CardContent className="pt-4">
             <div className="relative w-full overflow-hidden rounded-md ring-1 ring-inset ring-border">
               <Image
-                src="/images/luxury-living-room-1.jpg"
+                src="/images/luxury-living-room.jpg"
                 alt="Aerial view of Melbourne representing our service area"
                 width={1600}
                 height={900}

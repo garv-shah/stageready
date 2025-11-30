@@ -24,49 +24,6 @@ type StyleItem = {
   icon: React.ReactNode;
 };
 
-const stylesData: StyleItem[] = [
-  {
-    key: "rustic",
-    title: "Rustic Warmth",
-    description: "Textured layers, natural wood, and lived-in charm.",
-    image: {
-      src: "/images/rustic-living-room-1.jpg",
-      alt: "Rustic living room with natural wood tones and warm textures",
-    },
-    icon: <Frame className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    key: "contemporary",
-    title: "Contemporary Calm",
-    description: "Clean lines, balanced contrast, elevated simplicity.",
-    image: {
-      src: "/images/contemporary-living-room-1.jpg",
-      alt: "Contemporary styled living space with clean lines and neutral palette",
-    },
-    icon: <LayoutTemplate className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    key: "coastal",
-    title: "Coastal Light",
-    description: "Breezy hues, airy materials, serene flow.",
-    image: {
-      src: "/images/cozy-living-room-1.jpg",
-      alt: "Coastal interior with soft blue accents and natural textures",
-    },
-    icon: <SectionIcon className="h-5 w-5" aria-hidden="true" />,
-  },
-  {
-    key: "organic",
-    title: "Organic Modern",
-    description: "Soft silhouettes, greenery, and grounded tones.",
-    image: {
-      src: "/images/modern-living-room-1.jpg",
-      alt: "Organic modern room featuring plants and soft neutral colors",
-    },
-    icon: <Sofa className="h-5 w-5" aria-hidden="true" />,
-  },
-];
-
 function StyleCard({
   item,
 }: {

@@ -13,7 +13,7 @@ const values = [
     title: "Crafted with Intention",
     icon: Layers,
     description:
-      "An interior designer and property stylist with an eye for detailevery texture, line, and placement serves a purpose.",
+      "An interior designer and property stylist with an eye for detail every texture, line, and placement serves a purpose.",
   },
   {
     title: "Client-Centred",
@@ -38,12 +38,12 @@ const expertise = [
   {
     title: "Furniture Curation",
     icon: Sofa,
-    description: "Pieces that anchor each room and harmonize scale and proportion.",
+    description: "Pieces that anchor each room and harmonise scale and proportion.",
   },
   {
     title: "Materiality + Layers",
     icon: Layers,
-    description: "Thoughtful layerstextiles, finishes, and patinato add depth.",
+    description: "Thoughtful layers, textiles, and finishes add depth.",
   },
   {
     title: "Style Direction",
@@ -58,14 +58,14 @@ const expertise = [
   {
     title: "Colour + Texture",
     icon: Wallpaper,
-    description: "Neutral foundations with soft pink accents for refined warmth.",
+    description: "Neutral foundations with accents of colour.",
   },
 ]
 
 const testimonials = [
   {
     quote:
-      "Stage Ready transformed our listingbuyers immediately connected with the space. We received multiple offers in the first week.",
+      "Stage Ready transformed our listing, and buyers immediately connected with the space. We received multiple offers in the first week.",
     name: "Olivia Martin",
     role: "Realtor, Martin & Co.",
     avatar:
@@ -73,7 +73,7 @@ const testimonials = [
   },
   {
     quote:
-      "They understood our needs and created a home that felt calm, cohesive, and elevatedwithout losing our personality.",
+      "They understood our needs and created a home that felt calm, cohesive, and elevated, without losing our personality.",
     name: "Daniel Lee",
     role: "Homeowner",
     avatar:
@@ -111,10 +111,10 @@ export default function AboutPage({ className }: AboutPageProps) {
                 Spaces that tell stories and come alive
               </h1>
               <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                Stage Ready is an interior designer and property stylist with a meticulous eye for
+                Stage Ready offers interior designing and property styling with a meticulous eye for
                 detail. We create refined, welcoming environments that resonate with buyers and
-                reflect the people who live there. With a clean, neutral palette and soft pink
-                accents, our styling elevates photography, maximises appeal, and makes every space
+                reflect the people who live there. With a clean, neutral palette and accents of colour,
+                our styling elevates photography, maximises appeal, and makes every space
                 feel intentional.
               </p>
               <div className="mt-6 flex flex-wrap items-center justify-start gap-3">
@@ -263,7 +263,7 @@ export default function AboutPage({ className }: AboutPageProps) {
                 <SolutionPoint
                   icon={Wallpaper}
                   title="Neutral elegance"
-                  body="A timeless palette with soft pink accents to broaden appeal."
+                  body="A timeless palette with accents of colour to broaden appeal."
                 />
               </div>
             </TabsContent>
@@ -402,7 +402,7 @@ export default function AboutPage({ className }: AboutPageProps) {
             <div className="min-w-0">
               <h2 className="text-xl sm:text-2xl font-semibold">Our Philosophy</h2>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                We believe the best spaces are honestrooted in function, edited with care, and
+                We believe the best spaces are honest, rooted in function, edited with care, and
                 layered with meaning. We listen first, then shape rooms that support how you live and
                 what you want to achieve. Every choice, from proportion to palette, is made to
                 create harmony and help buyers connect emotionally.
@@ -420,14 +420,14 @@ export default function AboutPage({ className }: AboutPageProps) {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-2 h-1.5 w-6 rounded-full bg-foreground/80" aria-hidden="true" />
-                  <span className="min-w-0">Neutral palettes with soft pink accents for refined calm.</span>
+                  <span className="min-w-0">Neutral palettes with accents of colour for refined calm.</span>
                 </li>
               </ul>
             </div>
             <div className="relative overflow-hidden rounded-lg border bg-secondary">
               <img
-                src="/images/contemporary-bedroom-1.jpg"
-                alt="Styled living space with neutral palette and soft pink accents"
+                src="/images/backyard.jpg"
+                alt="Styled backyard with neutral palette and accents of colour."
                 className="h-full w-full object-cover"
                 loading="lazy"
               />

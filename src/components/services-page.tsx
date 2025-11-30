@@ -69,12 +69,12 @@ const services: Service[] = [
       "Photo-ready presentation with cohesive color story",
     ],
     image: {
-      src: "/images/vacant-property-styling.jpg",
+      src: "/images/living-room-11.jpg",
       alt: "Light-filled staged living room with neutral palette and accents of colour",
     },
     testimonial: {
       quote:
-        "We received multiple offers after the first weekend. The home felt elevated yet welcomingexactly what the listing needed.",
+        "We received multiple offers after the first weekend. The home felt elevated yet welcoming, exactly what the listing needed.",
       author: "Sophie M.",
       role: "Listing Agent",
     },
@@ -105,12 +105,12 @@ const services: Service[] = [
       "Styling day and photo-ready finishing touches",
     ],
     image: {
-      src: "/images/occupied-property-styling.jpg",
+      src: "/images/kitchen-8.jpg",
       alt: "Refreshed dining area with curated styling in an occupied home",
     },
     testimonial: {
       quote:
-        "They worked wonders with our existing pieces. The home felt bigger and brighterphotos came out beautifully.",
+        "They worked wonders with our existing pieces. The home felt bigger and the photos came out beautifully.",
       author: "Daniel K.",
       role: "Homeowner",
     },
@@ -125,7 +125,7 @@ const services: Service[] = [
     name: "Partial Property Styling",
     icon: <Bed className="size-5" aria-hidden="true" />,
     summary:
-      "Target high-impact roomslike living, primary suite, and entryto elevate the listing where it matters most. Strategic impact, streamlined scope.",
+      "Target high-impact rooms like living, primary suite, and entry to elevate the listing where it matters most. Strategic impact, streamlined scope.",
     audience:
       "Great for vendors seeking maximum ROI on select spaces or where timelines and budgets are tight.",
     value: [
@@ -141,12 +141,12 @@ const services: Service[] = [
       "De-staging post-settlement or campaign end",
     ],
     image: {
-      src: "/images/partial-property-styling.jpg",
-      alt: "Calm, styled bedroom with layered textures and neutral tones",
+      src: "/images/living-room-10.jpg",
+      alt: "Calm, styled living room with layered textures and natural tones",
     },
     testimonial: {
       quote:
-        "We focused on the living and primary suitethe difference was night and day. It photographed like a magazine.",
+        "We focused on the living and primary suite; the difference was night and day. It photographed like a magazine.",
       author: "Priya N.",
       role: "Vendor",
     },
@@ -166,7 +166,7 @@ const services: Service[] = [
       "Developers, builders, and project marketers seeking consistent, on-brand presentation across multiple dwellings.",
     value: [
       "Cohesive, repeatable styling systems for multiple units",
-      "Optimised for marketing photography and display walkthroughs",
+      "Optimised for marketing photography and display walk throughs",
       "Durable selections designed for campaign duration",
       "Streamlined logistics, install, and refresh schedules",
     ],
@@ -177,7 +177,7 @@ const services: Service[] = [
       "Handover documentation and de-staging",
     ],
     image: {
-      src: "/images/styling-for-developers.jpg",
+      src: "/images/dining-room-7.jpg",
       alt: "Modern display kitchen and living space staged for developers",
     },
     testimonial: {
