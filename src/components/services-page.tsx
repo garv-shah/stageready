@@ -362,7 +362,7 @@ export default function ServicesPage({
                     "{svc.testimonial.quote}"
                   </blockquote>
                   <figcaption className="mt-2 text-xs text-muted-foreground">
-                     {svc.testimonial.author}
+                    {svc.testimonial.author}
                     {svc.testimonial.role ? `, ${svc.testimonial.role}` : ""}
                   </figcaption>
                 </figure>
