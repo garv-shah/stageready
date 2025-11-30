@@ -426,8 +426,8 @@ export default function AboutPage({ className }: AboutPageProps) {
             </div>
             <div className="relative overflow-hidden rounded-lg border bg-secondary">
               <img
-                src="/images/backyard.jpg"
-                alt="Styled backyard with neutral palette and accents of colour."
+                src="/images/tabletop-3.jpeg"
+                alt="Styled tabletop with chains, a book, and a pot-plant."
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
