@@ -1,4 +1,10 @@
-import Navigation from "@/components/navigation";
+import { Metadata } from "next"
+import Navigation from "@/components/navigation"
+
+export const metadata: Metadata = {
+  title: "Our Work - Stage Ready",
+  description: "View our portfolio of beautifully staged homes in Melbourne. See the difference Stage Ready makes.",
+};
 import Footer from "@/components/footer";
 import OurWorkPage from "@/components/our-work-page";
 
@@ -9,7 +15,7 @@ export default function Page() {
   } as React.CSSProperties;
 
   return (
-    <div 
+    <div
       className="min-h-dvh bg-background text-foreground flex flex-col"
       style={brandStyle}
     >

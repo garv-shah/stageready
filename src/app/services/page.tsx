@@ -1,10 +1,16 @@
+import { Metadata } from "next"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import ServicesPage from "@/components/services-page"
 
+export const metadata: Metadata = {
+  title: "Our Services - Stage Ready",
+  description: "Explore our range of home staging services, from partial styling to full property makeovers.",
+}
+
 export default function Page() {
   return (
-    <div 
+    <div
       className="min-h-dvh bg-background text-foreground flex flex-col"
       style={
         {

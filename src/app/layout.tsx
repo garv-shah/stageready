@@ -7,6 +7,29 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Stage Ready",
   description: "Premium Home Staging Melbourne",
+  metadataBase: new URL("https://www.stageready.com.au"),
+  openGraph: {
+    title: "Stage Ready",
+    description: "Premium Home Staging Melbourne",
+    url: "https://www.stageready.com.au",
+    siteName: "Stage Ready",
+    images: [
+      {
+        url: "/social-media.png",
+        width: 1200,
+        height: 630,
+        alt: "Stage Ready - Premium Home Staging Melbourne",
+      },
+    ],
+    locale: "en_AU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Stage Ready",
+    description: "Premium Home Staging Melbourne",
+    images: ["/social-media.png"],
+  },
 };
 
 export default function RootLayout({

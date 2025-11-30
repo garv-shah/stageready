@@ -1,10 +1,16 @@
-import Navigation from "@/components/navigation";
+import { Metadata } from "next"
+import Navigation from "@/components/navigation"
+
+export const metadata: Metadata = {
+  title: "Book a Consultation - Stage Ready",
+  description: "Schedule a consultation with Stage Ready to transform your property and maximize its sale potential.",
+};
 import Footer from "@/components/footer";
 import BookConsultPage from "@/components/book-consult-page";
 
 export default function Page() {
   return (
-    <div 
+    <div
       className="min-h-dvh bg-background text-foreground flex flex-col"
       style={
         {

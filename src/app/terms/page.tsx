@@ -1,6 +1,12 @@
-"use client"
+
 
 import React from "react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Terms of Service - Stage Ready",
+    description: "Read our Terms of Service to understand the rules and regulations for using our website and services.",
+}
 
 export default function TermsPage() {
     return (

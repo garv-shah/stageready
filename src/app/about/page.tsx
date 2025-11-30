@@ -1,4 +1,10 @@
-import Navigation from "@/components/navigation";
+import { Metadata } from "next"
+import Navigation from "@/components/navigation"
+
+export const metadata: Metadata = {
+  title: "About Us - Stage Ready",
+  description: "Learn about Stage Ready, our mission, and our team of expert home stagers in Melbourne.",
+};
 import Footer from "@/components/footer";
 import AboutPage from "@/components/about-page";
 
