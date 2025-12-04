@@ -24,7 +24,7 @@ const DEFAULT_PROJECTS = [
   "/images/doorway.jpg",
   "/images/kitchen-7.jpg",
   "/images/bedroom-6.jpg",
-  // "/images/bedroom-7.jpg",
+  "/images/bedroom-7.jpg",
   "/images/bedroom-9.jpg",
   "/images/tabletop-2.jpg",
   "/images/tabletop.jpg",
