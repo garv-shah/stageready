@@ -16,6 +16,16 @@ import {
 
 
 const DEFAULT_PROJECTS = [
+  "/images/0M9A8477.JPG",
+  "/images/0M9A8492.JPG",
+  "/images/0M9A8497.JPG",
+  "/images/0M9A8502.JPG",
+  "/images/0M9A8512.JPG",
+  "/images/0M9A8542.JPG",
+  "/images/0M9A8558.JPG",
+  "/images/0M9A8563.JPG",
+  "/images/0M9A8568.JPG",
+  "/images/0M9A8590.JPG",
   "/images/dining-room-4.jpg",
   "/images/living-room-2.jpg",
   "/images/dining-room-5.jpg",
