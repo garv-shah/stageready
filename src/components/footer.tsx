@@ -36,7 +36,7 @@ const DEFAULT_LEGAL: NavLink[] = [
 export default function Footer({
   className,
   companyName = "Stage Ready",
-  phone = "0447 856 645",
+  phone = "0477 753 330",
   email = "info@stageready.com.au",
   addressLines = ["Melbourne, Victoria"],
   social = { instagram: "https://www.instagram.com/stage_ready_property" },

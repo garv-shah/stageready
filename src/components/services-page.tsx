@@ -69,7 +69,7 @@ const services: Service[] = [
       "Photo-ready presentation with cohesive color story",
     ],
     image: {
-      src: "/images/living-room-11.jpg",
+      src: "/images/springvale/living-room-11.jpg",
       alt: "Light-filled staged living room with neutral palette and accents of colour",
     },
     testimonial: {
@@ -105,7 +105,7 @@ const services: Service[] = [
       "Styling day and photo-ready finishing touches",
     ],
     image: {
-      src: "/images/kitchen-8.jpg",
+      src: "/images/springvale/kitchen-8.jpg",
       alt: "Refreshed dining area with curated styling in an occupied home",
     },
     testimonial: {
@@ -141,7 +141,7 @@ const services: Service[] = [
       "De-staging post-settlement or campaign end",
     ],
     image: {
-      src: "/images/living-room-10.jpg",
+      src: "/images/springvale/living-room-10.jpg",
       alt: "Calm, styled living room with layered textures and natural tones",
     },
     testimonial: {
@@ -177,7 +177,7 @@ const services: Service[] = [
       "Handover documentation and de-staging",
     ],
     image: {
-      src: "/images/dining-room-7.jpg",
+      src: "/images/springvale/dining-room-7.jpg",
       alt: "Modern display kitchen and living space staged for developers",
     },
     testimonial: {

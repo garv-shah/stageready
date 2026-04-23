@@ -146,8 +146,8 @@ export default function PrivacyPolicyPage() {
                             </a>
                         </p>
                         <p>
-                            <a href="tel:+61447856645" className="text-primary hover:underline">
-                                0447 856 645
+                            <a href="tel:+61477753330" className="text-primary hover:underline">
+                                0477 753 330
                             </a>
                         </p>
                     </div>

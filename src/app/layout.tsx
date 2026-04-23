@@ -3,6 +3,7 @@ import "./globals.css";
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Stage Ready",
@@ -60,6 +61,7 @@ export default function RootLayout({
           data-custom-data='{"appName": "Stage Ready", "version": "1.0.0", "greeting": "hi"}'
         />
         {children}
+        <Toaster position="bottom-right" richColors closeButton />
         <VisualEditsMessenger />
       </body>
     </html>

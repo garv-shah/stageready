@@ -51,7 +51,6 @@ const services = [
 
 export default function BookConsultPage({ className }: Props) {
   const [tab, setTab] = React.useState<string>("schedule");
-  const [loading, setLoading] = React.useState(false);
   const [form, setForm] = React.useState<BookingFormState>({
     name: "",
     email: "",
@@ -79,36 +78,133 @@ export default function BookConsultPage({ className }: Props) {
     return null;
   }
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function buildMailtoUrl(subject: string, body: string): string {
+    return "mailto:info@stageready.com.au?subject=" + encodeURIComponent(subject) + String.fromCharCode(38) + "body=" + encodeURIComponent(body);
+  }
+
+  const scheduleMailtoUrl = React.useMemo(() => {
+    const serviceName = services.find((s) => s.id === form.service)?.label ?? form.service ?? "";
+    const subject = "Consultation Request from " + form.name;
+    const lines = [
+      "Hi Stage Ready,",
+      "",
+      "I'd like to book a consultation. Here are my details:",
+      "",
+      "Name: " + form.name,
+    ];
+    if (form.email) lines.push("Email: " + form.email);
+    if (form.phone) lines.push("Phone: " + form.phone);
+    if (form.agentLicense) lines.push("Agent Licence: " + form.agentLicense);
+    lines.push("");
+    lines.push("Consultation Type: " + serviceName);
+    lines.push("Preferred Date: " + (form.date ?? ""));
+    lines.push("Preferred Time: " + (form.time ?? ""));
+    if (form.notes) {
+      lines.push("");
+      lines.push("Additional Notes:");
+      lines.push(form.notes);
+    }
+    lines.push("");
+    lines.push("Looking forward to hearing from you.");
+    lines.push("");
+    lines.push("Kind regards,");
+    lines.push(form.name);
+    return buildMailtoUrl(subject, lines.join("\n"));
+  }, [form]);
+
+  const callbackMailtoUrl = React.useMemo(() => {
+    const subject = "Call Back Request from " + form.name;
+    const lines = [
+      "Hi Stage Ready,",
+      "",
+      "I'd like to request a call back to discuss a consultation.",
+      "",
+      "Name: " + form.name,
+    ];
+    if (form.email) lines.push("Email: " + form.email);
+    lines.push("Phone: " + form.phone);
+    if (form.notes) {
+      lines.push("");
+      lines.push("How you can help:");
+      lines.push(form.notes);
+    }
+    lines.push("");
+    lines.push("Looking forward to your call.");
+    lines.push("");
+    lines.push("Kind regards,");
+    lines.push(form.name);
+    return buildMailtoUrl(subject, lines.join("\n"));
+  }, [form]);
+
+  function buildEmailBody(isSchedule: boolean): string {
+    if (isSchedule) {
+      const serviceName = services.find((s) => s.id === form.service)?.label ?? form.service ?? "";
+      const lines = [
+        "Hi Stage Ready,",
+        "",
+        "I'd like to book a consultation. Here are my details:",
+        "",
+        "Name: " + form.name,
+      ];
+      if (form.email) lines.push("Email: " + form.email);
+      if (form.phone) lines.push("Phone: " + form.phone);
+      if (form.agentLicense) lines.push("Agent Licence: " + form.agentLicense);
+      lines.push("");
+      lines.push("Consultation Type: " + serviceName);
+      lines.push("Preferred Date: " + (form.date ?? ""));
+      lines.push("Preferred Time: " + (form.time ?? ""));
+      if (form.notes) {
+        lines.push("");
+        lines.push("Additional Notes:");
+        lines.push(form.notes);
+      }
+      lines.push("");
+      lines.push("Looking forward to hearing from you.");
+      lines.push("");
+      lines.push("Kind regards,");
+      lines.push(form.name);
+      return lines.join("\n");
+    } else {
+      const lines = [
+        "Hi Stage Ready,",
+        "",
+        "I'd like to request a call back to discuss a consultation.",
+        "",
+        "Name: " + form.name,
+      ];
+      if (form.email) lines.push("Email: " + form.email);
+      lines.push("Phone: " + form.phone);
+      if (form.notes) {
+        lines.push("");
+        lines.push("How you can help:");
+        lines.push(form.notes);
+      }
+      lines.push("");
+      lines.push("Looking forward to your call.");
+      lines.push("");
+      lines.push("Kind regards,");
+      lines.push(form.name);
+      return lines.join("\n");
+    }
+  }
+
+  function handleMailtoClick(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
+
     const error = validate();
     if (error) {
       toast.error(error);
       return;
     }
-    setLoading(true);
-    try {
-      await new Promise((r) => setTimeout(r, 900));
-      toast.success(
-        tab === "schedule"
-          ? "Thanks! Your consultation request has been received. We'll confirm shortly."
-          : "Thanks! We'll call you back to coordinate your free consultation."
-      );
-      setForm({
-        name: "",
-        email: "",
-        phone: "",
-        agentLicense: "",
-        date: "",
-        time: undefined,
-        service: undefined,
-        notes: "",
-      });
-    } catch {
-      toast.error("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
+
+    const isSchedule = tab === "schedule";
+    const body = buildEmailBody(isSchedule);
+
+    navigator.clipboard.writeText(body).then(() => {
+      toast.success("Email content copied to clipboard! Please send it to info@stageready.com.au", { duration: 8000 });
+    }).catch(() => {
+      toast.info("Please email info@stageready.com.au with your details.", { duration: 8000 });
+    });
   }
 
   return (
@@ -153,7 +249,7 @@ export default function BookConsultPage({ className }: Props) {
                   </TabsList>
 
                   <TabsContent value="schedule" className="mt-4">
-                    <form onSubmit={onSubmit} className="space-y-5">
+                    <div className="space-y-5">
                       <div className="grid gap-4 sm:grid-cols-2">
                         <div className="space-y-2">
                           <Label htmlFor="name">Full name</Label>
@@ -185,7 +281,7 @@ export default function BookConsultPage({ className }: Props) {
                             autoComplete="tel"
                             value={form.phone}
                             onChange={(e) => handleChange("phone", e.target.value)}
-                            placeholder="0447 856 645"
+                            placeholder="0477 753 330"
                           />
                         </div>
                         <div className="space-y-2">
@@ -264,18 +360,22 @@ export default function BookConsultPage({ className }: Props) {
                       </div>
 
                       <div className="flex flex-wrap items-center gap-3 pt-2">
-                        <Button type="submit" disabled={loading}>
-                          {loading ? "Submitting..." : "Request free consultation"}
-                        </Button>
+                        <a
+                          href={scheduleMailtoUrl}
+                          onClick={handleMailtoClick}
+                          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                        >
+                          Request free consultation
+                        </a>
                         <p className="text-xs text-muted-foreground">
                           By submitting, you agree to be contacted about your request.
                         </p>
                       </div>
-                    </form>
+                    </div>
                   </TabsContent>
 
                   <TabsContent value="callback" className="mt-4">
-                    <form onSubmit={onSubmit} className="space-y-5">
+                    <div className="space-y-5">
                       <div className="grid gap-4 sm:grid-cols-2">
                         <div className="space-y-2">
                           <Label htmlFor="cb-name">Full name</Label>
@@ -296,7 +396,7 @@ export default function BookConsultPage({ className }: Props) {
                             autoComplete="tel"
                             value={form.phone}
                             onChange={(e) => handleChange("phone", e.target.value)}
-                            placeholder="0447 856 645"
+                            placeholder="0477 753 330"
                             required
                           />
                         </div>
@@ -314,14 +414,18 @@ export default function BookConsultPage({ className }: Props) {
                       </div>
 
                       <div className="flex flex-wrap items-center gap-3 pt-2">
-                        <Button type="submit" disabled={loading}>
-                          {loading ? "Requesting..." : "Request a call back"}
-                        </Button>
+                        <a
+                          href={callbackMailtoUrl}
+                          onClick={handleMailtoClick}
+                          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                        >
+                          Request a call back
+                        </a>
                         <p className="text-xs text-muted-foreground">
                           We typically call back within 1 business day.
                         </p>
                       </div>
-                    </form>
+                    </div>
                   </TabsContent>
                 </Tabs>
               </CardContent>
@@ -450,7 +554,7 @@ export default function BookConsultPage({ className }: Props) {
             </CardHeader>
             <CardContent className="grid gap-4 sm:grid-cols-3">
               <a
-                href="tel:+61447856645"
+                href="tel:+61477753330"
                 className="group flex items-center gap-3 rounded-md border p-4 transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground">
@@ -459,7 +563,7 @@ export default function BookConsultPage({ className }: Props) {
                 <div className="min-w-0">
                   <p className="font-medium">Call us</p>
                   <p className="text-sm text-muted-foreground group-hover:text-foreground truncate">
-                    0447 856 645
+                    0477 753 330
                   </p>
                 </div>
               </a>

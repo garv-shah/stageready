@@ -88,7 +88,7 @@ export default function ContactPage({
 
           <div className="flex flex-wrap gap-3 pt-2">
             <a
-              href="tel:+61447856645"
+              href="tel:+61477753330"
               className="group inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-label="Call Stage Ready"
             >
@@ -118,7 +118,7 @@ export default function ContactPage({
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <a
-                    href="tel:+61447856645"
+                    href="tel:+61477753330"
                     className="group flex items-start gap-3 rounded-md px-3 py-2 ring-1 ring-inset ring-border transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   >
                     <div className="rounded-md bg-secondary p-2 text-foreground">
@@ -127,7 +127,7 @@ export default function ContactPage({
                     <div className="min-w-0">
                       <div className="text-sm font-medium">Phone</div>
                       <div className="text-sm text-muted-foreground">
-                        0447 856 645
+                        0477 753 330
                       </div>
                     </div>
                   </a>

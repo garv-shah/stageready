@@ -69,7 +69,7 @@ const testimonials = [
     name: "Olivia Martin",
     role: "Realtor, Martin & Co.",
     avatar:
-      "/images/testimonial-1.jpg",
+      "/images/testimonial-1.jpeg",
   },
   {
     quote:
@@ -77,7 +77,7 @@ const testimonials = [
     name: "Daniel Lee",
     role: "Homeowner",
     avatar:
-      "/images/testimonial-2.jpg",
+      "/images/testimonial-2.jpeg",
   },
   {
     quote:
@@ -85,7 +85,7 @@ const testimonials = [
     name: "Amelia Roberts",
     role: "Property Developer",
     avatar:
-      "/images/testimonial-3.jpg",
+      "/images/testimonial-3.jpeg",
   },
 ]
 
@@ -426,7 +426,7 @@ export default function AboutPage({ className }: AboutPageProps) {
             </div>
             <div className="relative overflow-hidden rounded-lg border bg-secondary">
               <img
-                src="/images/tabletop-3.jpeg"
+                src="/images/springvale/tabletop-3.jpeg"
                 alt="Styled tabletop with chains, a book, and a pot-plant."
                 className="h-full w-full object-cover"
                 loading="lazy"

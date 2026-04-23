@@ -63,7 +63,7 @@ export default function HomePageSection({ className }: HomePageProps) {
       <div className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden">
         {/* Background Image */}
         <Image
-          src="/images/homepage-background.jpg"
+          src="/images/springvale/homepage-background.jpg"
           alt="Elegant home staging background"
           fill
           className="object-cover"
