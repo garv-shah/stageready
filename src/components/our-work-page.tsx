@@ -45,6 +45,8 @@ const SUBURBS: SuburbData[] = [
       "/images/clyde/IMG_7636.jpg",
       "/images/clyde/IMG_7641.jpg",
       "/images/clyde/IMG_7647.jpg",
+      "/images/clyde/IMG_7653.jpg",
+      "/images/clyde/IMG_7662.jpg",
     ],
   },
   {
